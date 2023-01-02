@@ -7,6 +7,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
 </head>
+
 <body>
 	<script>
 		$('body').terminal({
@@ -19,20 +20,52 @@
 				this.echo(' Name: Axel POLENTES')
 				this.echo(' Age: ' + age)
 			},
+			skills: function(){
+				this.echo('Languages:')
+				this.echo('	French: native language')
+				this.echo('	English: fluent')
+				this.echo('	Spanish: school level')
+
+				this.echo('IT skills:')
+				this.echo('	Configuration of computers/servers (hardware, software...)')
+				this.echo('	Various hardware modifications (overclock...)')
+
+				this.echo('Programming:')
+				this.echo('	Languages:')
+				this.echo('	  Python, c#, html, css, php, javascript (html and javascript were used in this project)')
+				this.echo('	IDEs:')
+				this.echo('	  Visual Studio Code, Visual Studio')
+			},
+			hobbies: function(){
+				this.echo('Hobbies:')
+				this.echo('	IT: Programming/Networking')
+				this.echo('	Video games: Collecting game consoles')
+				this.echo('	Other: Car modifications and racing')
+			},
+			diplomas: function(){
+				this.echo('Diplomas:')
+				this.echo(' Currently attending a `BTS` in the IT field')
+				this.echo('	2022: Gratuated High School')
+			},
 			projects: function(){
 				window.open("https://www.github.com/fauwzk");
 			},
 			clear: function() {
 				this.echo('\n'*400);
 			},
+			quit: function() {
+				window.close();
+			},
 			help: function() {
 				this.echo('HELP:');
 				this.echo(' help -> Shows this help page');
 				this.echo(' whois -> Shows information on myself');
 				this.echo(' skills -> Shows my skills');
+				this.echo(' hobbies -> Shows my hobbies');
 				this.echo(' diplomas -> Shows my diplomas');
 				this.echo(' projects -> Shows my projects (opens my github page)');
 				this.echo(' clear -> clears the screen');
+				this.echo(' quit -> closes the terminal');
 			}
 		}, {
 			greetings: 'Welcome to my interactive CV!'+'\n'+'Please type `help` to begin!'
