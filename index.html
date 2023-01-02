@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Interactive CV</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
+</head>
+<body>
+	<script>
+		$('body').terminal({
+			hello: function(what) {
+				this.echo('Hello, ' + what + '. Wellcome to this terminal.');
+			},
+			whois: function(){
+				var age = new Date().getFullYear() - 2005;
+				this.echo('About myself:')
+				this.echo(' Name: Axel POLENTES')
+				this.echo(' Age: ' + age)
+			},
+			projects: function(){
+				window.open("https://www.github.com/fauwzk");
+			},
+			clear: function() {
+				this.echo('\n'*400);
+			},
+			help: function() {
+				this.echo('HELP:');
+				this.echo(' help -> Shows this help page');
+				this.echo(' whois -> Shows information on myself');
+				this.echo(' skills -> Shows my skills');
+				this.echo(' diplomas -> Shows my diplomas');
+				this.echo(' projects -> Shows my projects (opens my github page)');
+				this.echo(' clear -> clears the screen');
+			}
+		}, {
+			greetings: 'Welcome to my interactive CV!'+'\n'+'Please type `help` to begin!'
+		});
+	</script>
+</body>
+</html>
