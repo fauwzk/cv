@@ -53,9 +53,6 @@
 			clear: function() {
 				this.echo('\n'*400);
 			},
-			quit: function() {
-				window.close();
-			},
 			help: function() {
 				this.echo('HELP:');
 				this.echo(' help -> Shows this help page');
@@ -65,7 +62,6 @@
 				this.echo(' diplomas -> Shows my diplomas');
 				this.echo(' projects -> Shows my projects (opens my github page)');
 				this.echo(' clear -> clears the screen');
-				this.echo(' quit -> closes the terminal');
 			}
 		}, {
 			greetings: 'Welcome to my interactive CV!'+'\n'+'Please type `help` to begin!'
